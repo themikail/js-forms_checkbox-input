@@ -46,7 +46,6 @@ form.addEventListener("submit", (event) => {
     const successMessage = document.querySelector('[data-js="success"]');
     successMessage.removeAttribute("hidden");
 
-    // eslint-disable-next-line no-alert
     alert("Form submitted");
   } else {
     // Show the TOS error message
