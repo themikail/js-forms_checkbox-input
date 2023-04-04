@@ -30,3 +30,26 @@ form.addEventListener("submit", (event) => {
   // eslint-disable-next-line no-alert
   alert("Form submitted");
 });
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Get the TOS checkbox
+  const tosCheckbox = document.getElementById("tos");
+
+  // Check if the TOS checkbox is checked
+  if (tosCheckbox.checked) {
+    // Hide the TOS error message
+    hideTosError();
+
+    // Show the success message
+    const successMessage = document.querySelector('[data-js="success"]');
+    successMessage.removeAttribute("hidden");
+
+    // eslint-disable-next-line no-alert
+    alert("Form submitted");
+  } else {
+    // Show the TOS error message
+    showTosError();
+  }
+});
